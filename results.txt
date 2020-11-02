@@ -1,5 +1,36 @@
 stocks: 11/1/2020 DJIA\DOW
 
+log ratio loss:
+# since loss is log of product of percentages, min loss and max return stock should now be the same
+min loss(single stock):
+1103.31 (AAPL)
+
+max return(single stock):
+14.57 (AAPL)
+
+historical:
+epsilon:  0.05  return:  3.601554291135312      cum loss: 1106.1752610252322
+epsilon:  0.1   return:  3.646086729053164      cum loss: 1106.15401176818
+epsilon:  0.15  return:  3.6951731706388284     cum loss: 1106.130768781366
+epsilon:  0.2   return:  3.7492075112593812     cum loss: 1106.1054009385496
+epsilon:  0.25  return:  3.8085505869348153     cum loss: 1106.0778026807714
+epsilon:  0.3   return:  3.8734872760449046     cum loss: 1106.0479132997662
+epsilon:  0.35  return:  3.9441624543427944     cum loss: 1106.0157440590267
+epsilon:  0.4   return:  4.020487611036807      cum loss: 1105.9814156630805
+epsilon:  0.45  return:  4.10200707814953       cum loss: 1105.9452093319287
+epsilon:  0.5   return:  4.187708691966068      cum loss: 1105.9076358993334
+epsilon:  0.55  return:  4.275757185386679      cum loss: 1105.8695294612069
+epsilon:  0.6   return:  4.363117219642616      cum loss: 1105.832176449602
+epsilon:  0.65  return:  4.445010851309229      cum loss: 1105.7975007610873
+epsilon:  0.7   return:  4.514106882767186      cum loss: 1105.768348564357
+epsilon:  0.75  return:  4.559228864476499      cum loss: 1105.7489731260953
+epsilon:  0.8   return:  4.563085372279388      cum loss: 1105.7459700354682
+epsilon:  0.85  return:  4.4977051823247916     cum loss: 1105.7703638374662
+epsilon:  0.9   return:  4.313291006951773      cum loss: 1105.84324533942
+epsilon:  0.95  return:  3.899295746620137      cum loss: 1106.017320602907
+
+
+ratio loss:
 min loss(single stock):
 1286.24
 

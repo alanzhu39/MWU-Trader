@@ -35,4 +35,3 @@ for k in range(1, 20):
         rebalance(portfolio, weights)
 
     print("epsilon: ",epsilon,"\treturn: ",running_value[-1]/start,'\tcum loss:',running_loss)
-    print(weights)
