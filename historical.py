@@ -11,11 +11,11 @@ n = extra['n']
 T = extra['T']
 bounds = extra['bounds']
 start = 100000
-running = 0
+running = np.array([start])
 epsilon = 0.25
 
 for k in range(1, 45):
-    epsilon = k/100
+    epsilon = (k+45)/100
     running = 0
     portfolio = np.full(n, start/n)
     weights = np.full(n, 1/n)
@@ -25,9 +25,8 @@ for k in range(1, 45):
         for i in range(len(losses)):
             portfolio[i] *= data[t][i]/data[t-1][i]
             losses[i] = (data[t][i]/data[t-1][i]-bounds[1])/(bounds[0]-bounds[1])
-        running += np.dot(losses, weights)
+        running = np.append(running, np.sum(portfolio))
         update_simple(weights, losses, epsilon)
         rebalance(portfolio, weights)
 
-    print("epsilon: ",epsilon)
-    print("result: ",running)
+    print("epsilon: ",epsilon,"\tresult: ",running[-1]/start)
