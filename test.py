@@ -6,7 +6,10 @@ data = np.loadtxt('data.csv', delimiter=',')
 efile = open('extra.json', 'r')
 extra = json.load(efile)
 efile.close()
-fin = open('stock_list.txt', 'r')
+
+stock_file = 'DJIA_20y.txt'
+
+fin = open(stock_file, 'r')
 stocks = fin.read().split()
 fin.close()
 
