@@ -81,4 +81,4 @@ def plot_best():
     plt.plot(best)
 
 if __name__ == "__main__":
-    test_EG(False,0.1)
+    test_EG(True,1)

@@ -3,11 +3,13 @@ import pandas as pd
 import numpy as np
 from yahoo_fin.stock_info import *
 
-num_stocks = 15
-num_days = 5242
+num_stocks = 100
 stock_file = 'DJIA_20y.txt'
 
 fin = open(stock_file, 'r')
+start_day = fin.readline()
+end_day = fin.readline()
+num_days = int(fin.readline())
 stocks = fin.read().split()[:num_stocks]
 fin.close()
 
@@ -15,7 +17,7 @@ data = None
 
 for s in stocks:
     print(s)
-    ticker = get_data(s, start_date='01/01/2000', end_date='11/1/2020', interval='1d')
+    ticker = get_data(s, start_date=start_day, end_date=end_day, interval='1d')
     open_array = np.transpose(np.array([ticker['open'].to_numpy()]))
     if open_array.shape[0] != num_days:
         print(open_array.shape[0])

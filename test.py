@@ -1,6 +1,7 @@
 import json
 import numpy as np
 from updates import *
+import matplotlib.pyplot as plt
 
 data = np.loadtxt('data.csv', delimiter=',')
 efile = open('extra.json', 'r')
@@ -10,6 +11,9 @@ efile.close()
 stock_file = 'DJIA_20y.txt'
 
 fin = open(stock_file, 'r')
+fin.readline()
+fin.readline()
+fin.readline()
 stocks = fin.read().split()
 fin.close()
 
@@ -54,6 +58,15 @@ def test_return():
             ind = i
     print('return:',best,'\tstock:',stocks[ind])
 
+def plot_portfolio():
+    for i in range(n):
+        running = np.array([1])
+        for t in range(1, T):
+            running = np.append(running, running[-1]*data[t][i]/data[t-1][i])
+        plt.plot(running)
+    plt.show()
+
 if __name__ == "__main__":
     test_gain_EG()
     test_return()
+    plot_portfolio()
