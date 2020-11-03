@@ -14,7 +14,7 @@ n = extra['n']
 T = extra['T']
 bounds = extra['bounds']
 
-def test_loss():
+def test_loss_simple():
     best = T
     ind = 0
     for i in range(n):
@@ -26,6 +26,18 @@ def test_loss():
             best = running
             ind = i
     print('loss:',best,'\tstock:',stocks[ind])
+
+def test_gain_EG():
+    best = 0
+    ind = 0
+    for i in range(n):
+        running = 0
+        for t in range(1, T):
+            running += np.log(data[t][i]/data[t-1][i])
+        if running > best:
+            best = running
+            ind = i
+    print('gain:',best,'\tstock:',stocks[ind])
 
 def test_return():
     best = 1
@@ -39,5 +51,6 @@ def test_return():
             ind = i
     print('return:',best,'\tstock:',stocks[ind])
 
-test_loss()
-test_return()
+if __name__ == "__main__":
+    test_gain_EG()
+    test_return()
