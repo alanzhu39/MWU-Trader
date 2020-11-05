@@ -8,7 +8,7 @@ efile = open('extra.json', 'r')
 extra = json.load(efile)
 efile.close()
 
-stock_file = 'DJIA_20y.txt'
+stock_file = 'SP500_20y.txt'
 
 fin = open(stock_file, 'r')
 fin.readline()

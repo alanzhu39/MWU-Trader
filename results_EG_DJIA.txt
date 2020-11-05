@@ -1,0 +1,29 @@
+stocks: DJIA_20y
+
+max gain stock:
+gain: 3.8212855441308102        stock: UNH
+
+max return stock:
+# Should be the same as above
+return: 45.66287224264667       stock: UNH
+
+historical:
+eta:  0.5       return:  4.66506924456222       cum gain: 1.540102677610844
+eta:  1.0       return:  4.9783380712074825     cum gain: 1.60509611469839
+eta:  1.5       return:  5.457820724654121      cum gain: 1.6970495754026376
+eta:  2.0       return:  5.856217117822487      cum gain: 1.7675038521026105
+eta:  2.5       return:  6.149909924247983      cum gain: 1.8164374352474124
+eta:  3.0       return:  6.378169278061502      cum gain: 1.8528811091672215
+eta:  3.5       return:  6.558260442627928      cum gain: 1.8807253913618398
+eta:  4.0       return:  6.693259949976689      cum gain: 1.9011010424464252
+eta:  4.5       return:  6.785730465489688      cum gain: 1.9148219463704181
+eta:  5.0       return:  6.8408482164074735     cum gain: 1.9229117321927833
+eta:  5.5       return:  6.864986690462119      cum gain: 1.9264341004652752
+eta:  6.0       return:  6.864200544103542      cum gain: 1.9263195785571665
+eta:  6.5       return:  6.843575242292586      cum gain: 1.9233102913179623
+eta:  7.0       return:  6.807163252730375      cum gain: 1.917975477244241
+eta:  7.5       return:  6.758150211994852      cum gain: 1.9107492153304966
+eta:  8.0       return:  6.699057790767245      cum gain: 1.901966888264151
+eta:  8.5       return:  6.6319130821000165     cum gain: 1.8918933119117867
+eta:  9.0       return:  6.558372722030373      cum gain: 1.8807425115177305
+eta:  9.5       return:  6.479809753211111      cum gain: 1.8686911508608415

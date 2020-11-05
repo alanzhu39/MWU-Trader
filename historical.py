@@ -2,6 +2,7 @@ import json
 import numpy as np
 from updates import *
 import matplotlib.pyplot as plt
+import sys
 
 data = np.loadtxt('data.csv', delimiter=',')
 efile = open('extra.json', 'r')
@@ -35,7 +36,11 @@ def test_simple(use_range=True,denom=20):
 
         print("epsilon: ",epsilon,"\treturn: ",running_value[-1]/start,'\tcum loss:',running_loss)
         if not use_range:
-            plt.plot(running_value)
+            fig, axs = plt.subplots(2)
+            axs[0].plot(running_value)
+            for i in range(len(running_weights)):
+                axs[1].plot(running_weights[i])
+            plot_best(axs[0])
             plt.show()
             break
 
@@ -61,14 +66,15 @@ def test_EG(use_range=True,denom=20):
 
         print("eta: ",eta,"\treturn: ",running_value[-1]/start,'\tcum gain:',running_loss)
         if not use_range:
-            # plt.plot(running_value)
+            fig, axs = plt.subplots(2)
+            axs[0].plot(running_value)
             for i in range(len(running_weights)):
-                plt.plot(running_weights[i])
-            # plot_best()
+                axs[1].plot(running_weights[i])
+            plot_best(axs[0])
             plt.show()
             break
 
-def plot_best():
+def plot_best(plot_in):
     best = np.array([start])
     ind = 0
     for i in range(n):
@@ -78,7 +84,9 @@ def plot_best():
         if running[-1] > best[-1]:
             best = running
             ind = i
-    plt.plot(best)
+    plot_in.plot(best)
 
 if __name__ == "__main__":
-    test_EG(True,1)
+    range_bool = sys.argv[1] == 'True'
+    denominator = float(sys.argv[2])
+    test_EG(range_bool, denominator)

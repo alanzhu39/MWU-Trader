@@ -1,0 +1,29 @@
+stocks: SP500_20y
+
+max gain stock:
+gain: 6.758551172747087         stock: MNST
+
+max return stock:
+# Should be the same as above
+return: 861.3932812156601       stock: MNST
+
+historical:
+eta:  0.25      return:  13.034743486306262     cum gain: 2.567618368350731
+eta:  0.5       return:  14.364545599894265     cum gain: 2.664763059483581
+eta:  0.75      return:  16.577478551928607     cum gain: 2.8080450604539124
+eta:  1.0       return:  19.306029015921894     cum gain: 2.960417431373682
+eta:  1.25      return:  21.82427737750244      cum gain: 3.0830229913265477
+eta:  1.5       return:  23.73675075720278      cum gain: 3.1670245119626688
+eta:  1.75      return:  25.063295518594636     cum gain: 3.2214044459533477
+eta:  2.0       return:  25.889734578239665     cum gain: 3.253846541808229
+eta:  2.25      return:  26.286528575017968     cum gain: 3.269056586471303
+eta:  2.5       return:  26.345620617085224     cum gain: 3.2713020606844108
+eta:  2.75      return:  26.164768146854566     cum gain: 3.264413778590764
+eta:  3.0       return:  25.825082174523523     cum gain: 3.25134619697635
+eta:  3.25      return:  25.387633162800018     cum gain: 3.2342621721039593
+eta:  3.5       return:  24.897726942381098     cum gain: 3.2147765118491463
+eta:  3.75      return:  24.38810803944717      cum gain: 3.194095638060639
+eta:  4.0       return:  23.8806182982243       cum gain: 3.1730671800746504
+eta:  4.25      return:  23.387846557897586     cum gain: 3.152216509572628
+eta:  4.5       return:  22.915356772596315     cum gain: 3.131807287230954
+eta:  4.75      return:  22.46419842194265      cum gain: 3.1119228606899987
