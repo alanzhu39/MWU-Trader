@@ -4,7 +4,7 @@ import numpy as np
 from yahoo_fin.stock_info import *
 
 num_stocks = 600
-stock_file = 'SP500_20y.txt'
+stock_file = 'DJIA_20y.txt'
 
 fin = open(stock_file, 'r')
 start_day = fin.readline()
